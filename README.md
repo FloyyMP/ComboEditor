@@ -1,188 +1,45 @@
-# 🔧 Combo Editor
+# Combo Editor
 
-A fast, user-friendly command-line tool for processing large text files containing email:password combinations.
+A simple command-line tool for managing text files with email:password combinations.
 
-![Version](https://img.shields.io/badge/version-1.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.6+-green.svg)
-![License](https://img.shields.io/badge/license-MIT-orange.svg)
+## Setup
 
-## ✨ Features
+1. **Download Python**
+   - Go to [python.org](https://python.org) and download Python 3.6 or newer
+   - During installation, check "Add Python to PATH"
 
-### 📋 Extract Lines
-Extract a specific number of lines from the beginning of a file and save them to a new file. The original file is automatically updated with the remaining lines.
+2. **Download This Tool**
+   - Click the green "Code" button above
+   - Click "Download ZIP"
+   - Extract the ZIP file to a folder
 
-- Use custom amounts or quick presets
-- Original file is automatically trimmed
-- Perfect for splitting large datasets
+3. **Run the Tool**
+   - Open the folder where you extracted the files
+   - Double-click `main.py`
+   - OR open Command Prompt/Terminal in the folder and type:
+```
+     python main.py
+```
 
-### 🔗 Merge Files
-Combine multiple text files into a single file with ease.
+## What It Does
 
-- Select multiple files at once
-- Preserves all line content
-- Shows real-time progress and stats
+- **Extract Lines** - Take the first X lines from a file and save them separately
+- **Merge Files** - Combine multiple text files into one
+- **Deduplicate** - Remove duplicate email:password combinations
 
-### 🧹 Deduplicate Lines
-Remove exact duplicate email:password combinations from your files.
+## Usage
 
-- Detects `email:password` format
-- Only removes exact duplicates (same email AND same password)
-- Preserves non-combo lines
-- Case-insensitive email matching
+Just run `main.py` and follow the on-screen menu. It will open file picker windows to help you select files.
 
-## 🚀 Quick Start
+## Presets
 
-### Prerequisites
-- Python 3.6 or higher
-- tkinter (included with most Python installations)
-
-### Installation
-
-# Clone the repository
-git clone https://github.com/FloyyMP/ComboEditor.git
-
-# Navigate to the directory
-cd combo-editor
-
-# Run the tool
-python main.py
-
-## 📖 Usage
-
-Run the tool and select from the interactive menu:
-
-╔═══════════════════════════════════════╗
-║                                       ║
-║          COMBO EDITOR V1.0            ║
-║                                       ║
-╚═══════════════════════════════════════╝
-
-┌───────────────────────────────────────┐
-│  [1] Extract Lines                    │
-│  [2] Merge Files                      │
-│  [3] Deduplicate Lines                │
-│  [4] Exit                             │
-└───────────────────────────────────────┘
-
-### 1. Extract Lines
-
-1. Select your text file using the file picker
-2. Choose a preset or enter a custom amount
-3. Enter an output filename
-4. Done! The extracted lines are saved and the original file is updated
-
-**Example:**
-Original file: 1,000,000 lines
-Extract: 100,000 lines
-Result: 
-  - new_file.txt (100,000 lines)
-  - original.txt (900,000 lines remaining)
-
-### 2. Merge Files
-
-1. Select 2 or more text files
-2. Enter an output filename
-3. All files are combined into one
-
-**Example:**
-file1.txt: 50,000 lines
-file2.txt: 75,000 lines
-file3.txt: 25,000 lines
-Result: merged.txt (150,000 lines)
-
-### 3. Deduplicate Lines
-
-1. Select your text file
-2. Enter an output filename
-3. All exact duplicate email:password combos are removed
-
-**Example:**
-Input:
-  user@example.com:password123
-  test@site.com:pass456
-  user@example.com:password123  ← duplicate
-  user@example.com:different789  ← NOT duplicate (different password)
-
-Output:
-  user@example.com:password123
-  test@site.com:pass456
-  user@example.com:different789
-
-## ⚙️ Configuration
-
-### Presets
-
-Edit `presets.json` to customize your extraction presets:
-
+You can edit `presets.json` to add quick shortcuts for extracting lines:
+```json
 {
-  "test": 5000,
-  "100k": 100000,
-  "500k": 500000,
-  "1kk": 1000000
+  "small": 5000,
+  "medium": 100000,
+  "large": 1000000
 }
+```
 
-Add as many presets as you need with any name and line count.
-
-## 🖥️ Platform Support
-
-- ✅ Windows
-- ✅ macOS
-- ✅ Linux
-
-The tool automatically opens the output folder when processing is complete, using the appropriate file manager for your OS.
-
-## 🎯 Performance
-
-- Handles large files efficiently
-- UTF-8 and Latin-1 encoding support
-- Real-time progress indicators
-- Processing time displayed for all operations
-
-## 📝 File Format
-
-The tool works best with text files containing `email:password` combinations:
-
-user1@domain.com:password123
-user2@domain.com:mypass456
-user3@domain.com:secret789
-
-Non-combo lines are preserved as-is during deduplication.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- Report bugs
-- Suggest new features
-- Submit pull requests
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## ⚠️ Disclaimer
-
-This tool is for educational and legitimate security research purposes only. Always ensure you have proper authorization before processing any data.
-
-## 🛠️ Troubleshooting
-
-**File picker doesn't appear on top?**
-- The tool uses `topmost` attribute to bring dialogs to front
-- Try Alt+Tab to find the dialog window
-
-**Encoding errors?**
-- The tool automatically tries Latin-1 if UTF-8 fails
-- Most common text encodings are supported
-
-**Large file processing is slow?**
-- Processing time scales with file size
-- The tool shows real-time progress indicators
-- Consider splitting very large files (10M+ lines)
-
-## 📬 Contact
-
-For questions or support, please open an issue on GitHub.
-
----
-
-Made by https://discord.gg/floyy
+That's it! Select an option from the menu and follow the prompts. Join https://discord.gg/floyy for help.
