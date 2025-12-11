@@ -39,7 +39,7 @@ Remove exact duplicate email:password combinations from your files.
 ### Installation
 
 # Clone the repository
-git clone https://github.com/yourusername/combo-editor.git
+git clone https://github.com/FloyyMP/ComboEditor.git
 
 # Navigate to the directory
 cd combo-editor
