@@ -185,4 +185,4 @@ For questions or support, please open an issue on GitHub.
 
 ---
 
-Made with ❤️ for the data processing community
+Made by https://discord.gg/floyy
