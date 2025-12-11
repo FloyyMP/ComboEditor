@@ -41,10 +41,9 @@ Run `python main.py` and select from the menu:
 Edit `presets.json` to customize your extraction presets:
 ```json
 {
-  "test": 5000,
   "100k": 100000,
+  "250k": 250000,
   "500k": 500000,
-  "1kk": 1000000
 }
 ```
 
