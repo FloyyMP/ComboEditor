@@ -1,4 +1,3 @@
-```markdown
 # 🔧 Combo Editor
 
 A fast, user-friendly command-line tool for processing large text files containing email:password combinations.
@@ -39,7 +38,6 @@ Remove exact duplicate email:password combinations from your files.
 
 ### Installation
 
-```bash
 # Clone the repository
 git clone https://github.com/yourusername/combo-editor.git
 
@@ -48,13 +46,11 @@ cd combo-editor
 
 # Run the tool
 python main.py
-```
 
 ## 📖 Usage
 
 Run the tool and select from the interactive menu:
 
-```
 ╔═══════════════════════════════════════╗
 ║                                       ║
 ║          COMBO EDITOR V1.0            ║
@@ -67,7 +63,6 @@ Run the tool and select from the interactive menu:
 │  [3] Deduplicate Lines                │
 │  [4] Exit                             │
 └───────────────────────────────────────┘
-```
 
 ### 1. Extract Lines
 
@@ -77,13 +72,11 @@ Run the tool and select from the interactive menu:
 4. Done! The extracted lines are saved and the original file is updated
 
 **Example:**
-```
 Original file: 1,000,000 lines
 Extract: 100,000 lines
 Result: 
   - new_file.txt (100,000 lines)
   - original.txt (900,000 lines remaining)
-```
 
 ### 2. Merge Files
 
@@ -92,12 +85,10 @@ Result:
 3. All files are combined into one
 
 **Example:**
-```
 file1.txt: 50,000 lines
 file2.txt: 75,000 lines
 file3.txt: 25,000 lines
 Result: merged.txt (150,000 lines)
-```
 
 ### 3. Deduplicate Lines
 
@@ -106,7 +97,6 @@ Result: merged.txt (150,000 lines)
 3. All exact duplicate email:password combos are removed
 
 **Example:**
-```
 Input:
   user@example.com:password123
   test@site.com:pass456
@@ -117,7 +107,6 @@ Output:
   user@example.com:password123
   test@site.com:pass456
   user@example.com:different789
-```
 
 ## ⚙️ Configuration
 
@@ -125,14 +114,12 @@ Output:
 
 Edit `presets.json` to customize your extraction presets:
 
-```json
 {
   "test": 5000,
   "100k": 100000,
   "500k": 500000,
   "1kk": 1000000
 }
-```
 
 Add as many presets as you need with any name and line count.
 
@@ -155,11 +142,9 @@ The tool automatically opens the output folder when processing is complete, usin
 
 The tool works best with text files containing `email:password` combinations:
 
-```
 user1@domain.com:password123
 user2@domain.com:mypass456
 user3@domain.com:secret789
-```
 
 Non-combo lines are preserved as-is during deduplication.
 
@@ -201,4 +186,3 @@ For questions or support, please open an issue on GitHub.
 ---
 
 Made with ❤️ for the data processing community
-```
